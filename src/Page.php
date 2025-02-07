@@ -49,6 +49,8 @@ class Page
     public const LOAD = 'load';
     public const NETWORK_IDLE = 'networkIdle';
 
+    private const MAX_COOKIE_AGE = 60 * 60 * 24 * 365;
+
     /**
      * @var Target
      */
@@ -1084,6 +1086,11 @@ class Page
             // set domain from current page
             if (!isset($browserCookie['domain'])) {
                 $browserCookie['domain'] = \parse_url($this->getCurrentUrl(), \PHP_URL_HOST);
+            }
+
+            // set maximal expires if session=false
+            if (!isset($cookie['expires']) && ($cookie['session'] ?? null) === false) {
+                $browserCookie['expires'] = \time() + self::MAX_COOKIE_AGE;
             }
 
             $browserCookies[] = $browserCookie;

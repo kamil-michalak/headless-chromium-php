@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## 1.13.0 (UPCOMING)
+
+* Set maximal expires value if `session=false` in `Page::setCookies`
+
+
 ## 1.12.0 (2024-12-09)
 
 * Add PHP 8.4 support
