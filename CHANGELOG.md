@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## 1.13.0 (UPCOMING)
+## 1.13.0 (2025-02-07)
 
 * Set maximal expires value if `session=false` in `Page::setCookies`
 
