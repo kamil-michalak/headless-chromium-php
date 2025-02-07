@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## 1.12.1 (2025-02-07)
+
+* Fix nullable parameter definition in `AbstractBinaryInput::getRawBinary`
+
+
 ## 1.12.0 (2024-12-09)
 
 * Add PHP 8.4 support
